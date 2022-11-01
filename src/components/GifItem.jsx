@@ -11,8 +11,7 @@ export const GifItem = ({ id, title, url }) => {
   )
 }
 
-GifItem.prototypes = {
-  id: PropTypes.string.isRequired,
+GifItem.propTypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 }
