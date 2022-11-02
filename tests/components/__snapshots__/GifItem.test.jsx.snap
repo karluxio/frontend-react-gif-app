@@ -6,6 +6,7 @@ exports[`testing on GifItem component should match to snapshot 1`] = `
     class="card"
   >
     <img
+      alt="A great title"
       src="https://a-great-gif.jpg/"
     />
     <p>

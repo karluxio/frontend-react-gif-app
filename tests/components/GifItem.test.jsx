@@ -19,7 +19,7 @@ describe('testing on GifItem component', () => {
 
     const { src, alt } = screen.getByRole("img")
     expect(src).toBe(url)
-    expect(alt).toBe(alt)
+    expect(alt).toBe(title)
   })
 
   test('should shows title in component', () => {
