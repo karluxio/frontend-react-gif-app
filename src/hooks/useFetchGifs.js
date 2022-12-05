@@ -5,7 +5,7 @@ export const useFetchGifs = (category) => {
 
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(true)
 
   const getGifs = async () => {
     const gifsFromApi = await fetchGifs(category)

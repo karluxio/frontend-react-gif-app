@@ -14,12 +14,12 @@ export const GifGrid = ({ category = "" }) => {
       {error && <h3>Error...</h3>}
 
       <div className="card-grid">
-        {data.map(({ id, title, images }) => (
+        {data.map(({ id, title, url }) => (
           <GifItem
             key={id}
             id={id}
             title={title}
-            url={images.downsized_medium.url}
+            url={url}
           />
         ))}
       </div>
