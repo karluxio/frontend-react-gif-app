@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { fetchGifs } from "../helpers/fetchGifs"
 
 export const useFetchGifs = (category) => {
 
@@ -6,23 +7,16 @@ export const useFetchGifs = (category) => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
+  const getGifs = async () => {
+    const gifsFromApi = await fetchGifs(category)
+
+    setData(gifsFromApi)
+    setLoading(false)
+    setError(false)
+  }
+
   useEffect(() => {
-
-    const getGifs = (async () => {
-      const apiKey = "jdvZMbDstUoUU74RPdsakdWajFgXfFIh"
-      const baseUrl = "https://api.giphy.com/v1/gifs/search"
-      const url = `${baseUrl}?api_key=${apiKey}&q=${category}&limit=5`
-
-      try {
-        const resp = await fetch(url)
-        const { data } = await resp.json()
-        setData(data)
-        setLoading(false)
-        setError(false)
-      } catch (error) {
-        setError(true)
-      }
-    })()
+    getGifs()
   }, [])
 
   return {
