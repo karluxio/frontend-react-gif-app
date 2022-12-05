@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing on <AddCategory /> should match against snapshot 1`] = `
+<div>
+  <form
+    aria-label="form"
+  >
+    <input
+      placeholder="Add a category"
+      type="text"
+      value=""
+    />
+  </form>
+</div>
+`;
